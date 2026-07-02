@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>mycurlyo — 유전학 카드뉴스</title>
+<meta property="og:title" content="mycurlyo — 유전학 카드뉴스">
+<meta property="og:description" content="대학 수준의 유전학을 초등학생도 이해할 수 있게">
+<meta name="description" content="대학 수준의 유전학을 초등학생도 이해할 수 있게">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f14;
+  --surface:#1a1a24;
+  --surface2:#22222e;
+  --border:#2e2e3e;
+  --text:#f0f0f5;
+  --text2:#9090a8;
+  --text3:#5a5a72;
+  --accent:#7F4FE0;
+  --accent2:#A47FF0;
+  --green:#1D9E75;
+  --orange:#D85A30;
+}
+body{
+  font-family:'Noto Sans KR',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  padding:0;
+}
+
+/* 헤더 */
+.header{
+  padding:48px 24px 40px;
+  max-width:600px;
+  margin:0 auto;
+}
+.brand{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.15em;
+  color:var(--accent2);
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.title{
+  font-size:32px;
+  font-weight:900;
+  line-height:1.2;
+  margin-bottom:12px;
+  letter-spacing:-0.02em;
+}
+.title span{
+  color:var(--accent2);
+}
+.subtitle{
+  font-size:15px;
+  color:var(--text2);
+  line-height:1.7;
+}
+
+/* 구분선 */
+.divider{
+  height:1px;
+  background:var(--border);
+  margin:0 24px;
+  max-width:552px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* 블록 섹션 */
+.block{
+  max-width:600px;
+  margin:0 auto;
+  padding:32px 24px 8px;
+}
+.block-label{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--text3);
+  margin-bottom:16px;
+}
+
+/* 퀘스트 카드 */
+.quest-list{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-bottom:24px;
+}
+.quest{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px 16px;
+  text-decoration:none;
+  color:var(--text);
+  transition:border-color 0.15s, background 0.15s;
+  cursor:pointer;
+}
+.quest:hover{
+  border-color:var(--accent);
+  background:var(--surface2);
+}
+.quest.locked{
+  opacity:0.4;
+  cursor:default;
+  pointer-events:none;
+}
+.quest-num{
+  font-size:11px;
+  font-weight:700;
+  color:var(--accent2);
+  letter-spacing:0.08em;
+  min-width:28px;
+}
+.quest-info{
+  flex:1;
+}
+.quest-title{
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:2px;
+  line-height:1.4;
+}
+.quest-desc{
+  font-size:12px;
+  color:var(--text2);
+  line-height:1.5;
+}
+.quest-badge{
+  font-size:10px;
+  font-weight:700;
+  padding:3px 8px;
+  border-radius:20px;
+  white-space:nowrap;
+}
+.badge-done{
+  background:#1D9E7522;
+  color:var(--green);
+}
+.badge-soon{
+  background:#ffffff0a;
+  color:var(--text3);
+}
+
+/* 푸터 */
+.footer{
+  max-width:600px;
+  margin:0 auto;
+  padding:32px 24px 48px;
+  text-align:center;
+  font-size:12px;
+  color:var(--text3);
+  line-height:1.8;
+}
+.footer a{
+  color:var(--text3);
+  text-decoration:none;
+}
+.footer a:hover{
+  color:var(--accent2);
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="brand">mycurlyo · 유전학 카드뉴스</div>
+  <h1 class="title">유전학,<br><span>처음부터</span> 다시</h1>
+  <p class="subtitle">대학 수준의 유전학을<br>초등학생도 이해할 수 있게 — 카드 한 장씩</p>
+</div>
+
+<div class="divider"></div>
+
+<div class="block">
+  <div class="block-label">Block 1 · 기초 언어</div>
+  <div class="quest-list">
+
+    <a class="quest" href="cardnews_genetics_ep0.html">
+      <div class="quest-num">ep 0</div>
+      <div class="quest-info">
+        <div class="quest-title">유전학이 뭐야?</div>
+        <div class="quest-desc">생명의 설계도 — DNA란 무엇인가</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+    <a class="quest" href="cardnews_genetics_ep1.html">
+      <div class="quest-num">ep 1</div>
+      <div class="quest-info">
+        <div class="quest-title">설계도는 어디 있어?</div>
+        <div class="quest-desc">핵, 염색체, 그리고 꽁꽁 싸매기</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+    <a class="quest" href="cardnews_genetics_ep2_mendel.html">
+      <div class="quest-num">ep 2</div>
+      <div class="quest-info">
+        <div class="quest-title">완두콩 아저씨의 비밀</div>
+        <div class="quest-desc">멘델과 구슬 두 개 — 유전의 법칙</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+    <a class="quest" href="cardnews_genetics_ep3_morgan.html">
+      <div class="quest-num">ep 3</div>
+      <div class="quest-info">
+        <div class="quest-title">파리 한 마리의 비밀</div>
+        <div class="quest-desc">모건과 흰눈 파리 — 염색체가 설계도다</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+    <a class="quest" href="cardnews_genetics_ep4_dna.html">
+      <div class="quest-num">ep 4</div>
+      <div class="quest-info">
+        <div class="quest-title">설계도의 진짜 모양</div>
+        <div class="quest-desc">이중나선 발견 — Watson, Crick, Franklin</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+    <a class="quest" href="cardnews_genetics_ep5.html">
+      <div class="quest-num">ep 5</div>
+      <div class="quest-info">
+        <div class="quest-title">글자가 몸이 되는 마법 1부</div>
+        <div class="quest-desc">DNA → RNA — 복사본이 필요한 이유</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+    <a class="quest" href="cardnews_genetics_ep6.html">
+      <div class="quest-num">ep 6</div>
+      <div class="quest-info">
+        <div class="quest-title">글자가 몸이 되는 마법 2부</div>
+        <div class="quest-desc">RNA → 단백질 — 리보솜과 아미노산</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+    <a class="quest" href="cardnews_genetics_ep7.html">
+      <div class="quest-num">ep 7</div>
+      <div class="quest-info">
+        <div class="quest-title">구슬 두 개의 정체</div>
+        <div class="quest-desc">염색체 쌍 — 멘델 구슬의 물리적 실체</div>
+      </div>
+      <span class="quest-badge badge-done">완성</span>
+    </a>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="block">
+  <div class="block-label">Block 2 · 유전자의 구조 · 준비중</div>
+  <div class="quest-list">
+
+    <div class="quest locked">
+      <div class="quest-num">ep 8</div>
+      <div class="quest-info">
+        <div class="quest-title">유전자의 해부</div>
+        <div class="quest-desc">promoter, exon, intron, UTR — 설계도 한 장의 구조</div>
+      </div>
+      <span class="quest-badge badge-soon">준비중</span>
+    </div>
+
+    <div class="quest locked">
+      <div class="quest-num">ep 9</div>
+      <div class="quest-info">
+        <div class="quest-title">유전자 스위치의 발견</div>
+        <div class="quest-desc">cis/trans 조절 — lac operon과 인핸서</div>
+      </div>
+      <span class="quest-badge badge-soon">준비중</span>
+    </div>
+
+    <div class="quest locked">
+      <div class="quest-num">ep 10</div>
+      <div class="quest-info">
+        <div class="quest-title">잘려나가는 것들</div>
+        <div class="quest-desc">RNA 스플라이싱 — 인트론 발견의 충격</div>
+      </div>
+      <span class="quest-badge badge-soon">준비중</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="block">
+  <div class="block-label">Block 3 · 다양성 · 준비중</div>
+  <div class="quest-list">
+
+    <div class="quest locked">
+      <div class="quest-num">ep 11</div>
+      <div class="quest-info">
+        <div class="quest-title">설계도에 오타가 생기면</div>
+        <div class="quest-desc">돌연변이 — polymerase 오류, 뮤타겐, 레트로바이러스</div>
+      </div>
+      <span class="quest-badge badge-soon">준비중</span>
+    </div>
+
+    <div class="quest locked">
+      <div class="quest-num">ep 12</div>
+      <div class="quest-info">
+        <div class="quest-title">같은 유전자, 다른 버전</div>
+        <div class="quest-desc">Allele — 우성/열성의 분자적 원리</div>
+      </div>
+      <span class="quest-badge badge-soon">준비중</span>
+    </div>
+
+    <div class="quest locked">
+      <div class="quest-num">ep 13</div>
+      <div class="quest-info">
+        <div class="quest-title">유전자가 섞이는 방법</div>
+        <div class="quest-desc">교차와 재조합 — 발란서 염색체</div>
+      </div>
+      <span class="quest-badge badge-soon">준비중</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <p>mycurlyo · 유전학 카드뉴스</p>
+  <p style="margin-top:8px"><a href="mailto:mycurlyo@gmail.com">mycurlyo@gmail.com</a></p>
+</div>
+
+</body>
+</html>
