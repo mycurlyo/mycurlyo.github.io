@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>구슬 두 개의 정체</title>
+<meta property="og:title" content="구슬 두 개의 정체 — 유전학 카드뉴스">
+<meta property="og:description" content="멘델의 구슬 두 개가 실제로 DNA에서 어떻게 구현되는지">
+<meta property="og:type" content="website">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,sans-serif;background:#f5f5f7;padding:20px 16px;min-height:100vh}
+.wrap{max-width:480px;margin:0 auto}
+.dots{display:flex;gap:4px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.dot{width:18px;height:3px;border-radius:2px;background:#ddd;cursor:pointer}
+.dot.on{background:#1a1a2e}
+.card{display:none;background:#fff;border-radius:16px;border:0.5px solid #e0e0e0;overflow:hidden}
+.card.show{display:block}
+.ci{padding:22px 20px 18px}
+.ep{font-size:11px;color:#888;margin-bottom:8px}
+h1{font-size:22px;font-weight:700;line-height:1.3;color:#1a1a2e;margin-bottom:12px}
+h2{font-size:17px;font-weight:700;color:#1a1a2e;margin-bottom:10px}
+p{font-size:14px;line-height:1.85;color:#555;margin-bottom:10px}
+p:last-child{margin-bottom:0}
+.hl{color:#1a1a2e;font-weight:700}
+.em{color:#D85A30;font-weight:700}
+.box{border-radius:12px;padding:14px 16px;margin:10px 0;font-size:14px;line-height:1.8}
+.g{background:#E1F5EE;color:#085041}
+.p{background:#EEEDFE;color:#3C3489}
+.a{background:#FAEEDA;color:#633806}
+.w{background:#f5f5f7;color:#555}
+.b{background:#E6F1FB;color:#0C447C}
+.shock{border:2px solid #1a1a2e;border-radius:12px;padding:16px;margin:12px 0;text-align:center}
+.fact{font-size:19px;font-weight:700;color:#1a1a2e;line-height:1.4;margin:6px 0}
+.nx{background:#EEEDFE;border-radius:12px;padding:16px;margin-top:14px}
+.nxl{font-size:11px;font-weight:600;color:#7F77DD;margin-bottom:6px}
+.nxt{font-size:15px;font-weight:700;color:#3C3489;margin-bottom:4px}
+.nxd{font-size:13px;color:#534AB7;line-height:1.6}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px 0}
+.nb{font-size:13px;padding:10px 22px;border-radius:20px;border:1px solid #ddd;background:#fff;color:#555;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);touch-action:manipulation}
+.nb:disabled{opacity:.3}
+.nc{font-size:12px;color:#999}
+svg{width:100%;display:block}
+.divider{height:1px;background:#eee;margin:14px 0}
+</style>
+</head>
+<body>
+<div class="wrap" id="W">
+<div class="dots" id="D"></div>
+
+<div class="card show" id="c1"><div class="ci">
+<div class="ep">에피소드 7 · 구슬 두 개의 정체</div>
+<h1>46개인데 사실은 23쌍! 🧬</h1>
+<p>우리 몸 세포 안에 염색체가 46개 있다고 했지?</p>
+<p>근데 이게 그냥 46개가 아니야.</p>
+<div class="shock">
+<p class="fact">1번~23번까지<br>각각 두 개씩 쌍으로 있어!</p>
+</div>
+<p>하나는 <span class="hl">엄마</span>한테서, 하나는 <span class="hl">아빠</span>한테서 받은 거야. 이게 바로 멘델 구슬 두 개의 정체야!</p>
+</div></div>
+
+<div class="card" id="c2">
+<div class="ci">
+<h2>쌍이 된다는 게 무슨 말이야? 👫</h2>
+<p>예를 들어 1번 염색체를 보면—</p>
+</div>
+<svg viewBox="0 0 480 160">
+<text x="130" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#3C3489">1번 염색체 (엄마)</text>
+<rect x="100" y="32" width="60" height="100" rx="20" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1.5"/>
+<text x="130" y="72" text-anchor="middle" font-size="9" fill="#534AB7">눈 색깔</text>
+<text x="130" y="87" text-anchor="middle" font-size="9" fill="#534AB7">유전자</text>
+<text x="130" y="110" text-anchor="middle" font-size="9" fill="#534AB7">키 유전자</text>
+<text x="130" y="125" text-anchor="middle" font-size="9" fill="#534AB7">...</text>
+
+<text x="240" y="88" text-anchor="middle" font-size="22" fill="#aaa">쌍</text>
+
+<text x="350" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#D85A30">1번 염색체 (아빠)</text>
+<rect x="320" y="32" width="60" height="100" rx="20" fill="#FDEDEC" stroke="#D85A30" stroke-width="1.5"/>
+<text x="350" y="72" text-anchor="middle" font-size="9" fill="#C0392B">눈 색깔</text>
+<text x="350" y="87" text-anchor="middle" font-size="9" fill="#C0392B">유전자</text>
+<text x="350" y="110" text-anchor="middle" font-size="9" fill="#C0392B">키 유전자</text>
+<text x="350" y="125" text-anchor="middle" font-size="9" fill="#C0392B">...</text>
+</svg>
+<div class="ci" style="padding-top:4px">
+<p>엄마한테 받은 1번 염색체와 아빠한테 받은 1번 염색체가 <span class="hl">같은 유전자들을 같은 위치</span>에 갖고 있어. 같은 책의 엄마 버전, 아빠 버전이야!</p>
+</div></div>
+
+<div class="card" id="c3"><div class="ci">
+<h2>멘델 구슬 두 개 = 이거였어! 💡</h2>
+<p>기억나? 멘델은 "구슬이 두 개씩"이라고 했어.</p>
+<div class="box p">
+<p>이제 정체가 밝혀졌어.<br><br>
+구슬 두 개<br>
+= 엄마 염색체의 유전자 하나<br>
++ 아빠 염색체의 유전자 하나<br><br>
+같은 위치에 있는<br>
+<strong>두 가지 버전</strong>이야!</p>
+</div>
+<p>눈 색깔 유전자도 두 버전이 있어. 엄마 버전이 "파란 눈"을 시키고, 아빠 버전이 "갈색 눈"을 시킬 수 있어.</p>
+</div></div>
+
+<div class="card" id="c4"><div class="ci">
+<h2>그럼 우성/열성이 뭐야? 🤼</h2>
+<p>두 버전이 있을 때 — 두 개가 다른 말을 하면 누구 말을 들어야 할까?</p>
+<div class="box a">
+<p>두 버전이 싸우면<br>
+이기는 쪽이 나타나 → <strong>우성</strong><br>
+지는 쪽은 숨어 → <strong>열성</strong><br><br>
+예)<br>
+갈색 눈 버전 vs 파란 눈 버전<br>
+→ 갈색 눈이 이겨서 갈색 눈으로 나타남<br>
+→ 파란 눈은 숨어서 안 보임<br>
+(하지만 자식한테 전달은 됨!)</p>
+</div>
+</div></div>
+
+<div class="card" id="c5">
+<div class="ci">
+<h2>멘델 실험이 다시 보여! 🔄</h2>
+<p>이제 멘델 실험을 유전자로 다시 설명할 수 있어.</p>
+</div>
+<svg viewBox="0 0 480 180">
+<text x="110" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#085041">보라색 순종 (BB)</text>
+<rect x="75" y="28" width="30" height="50" rx="8" fill="#7F4FE0" opacity="0.8"/>
+<rect x="110" y="28" width="30" height="50" rx="8" fill="#7F4FE0" opacity="0.8"/>
+<text x="110" y="95" text-anchor="middle" font-size="9" fill="#888">보라 + 보라</text>
+
+<text x="240" y="55" text-anchor="middle" font-size="18" fill="#aaa">×</text>
+
+<text x="370" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#C0392B">흰색 순종 (bb)</text>
+<rect x="335" y="28" width="30" height="50" rx="8" fill="#ddd" stroke="#ccc"/>
+<rect x="370" y="28" width="30" height="50" rx="8" fill="#ddd" stroke="#ccc"/>
+<text x="370" y="95" text-anchor="middle" font-size="9" fill="#888">흰색 + 흰색</text>
+
+<line x1="15" y1="108" x2="465" y2="108" stroke="#eee" stroke-width="1"/>
+
+<text x="240" y="128" text-anchor="middle" font-size="11" font-weight="600" fill="#1a1a2e">자식 (Bb) → 전부 보라색!</text>
+<rect x="185" y="135" width="30" height="35" rx="8" fill="#7F4FE0" opacity="0.8"/>
+<rect x="220" y="135" width="30" height="35" rx="8" fill="#ddd" stroke="#ccc"/>
+<text x="240" y="185" text-anchor="middle" font-size="9" fill="#888">보라(우성) + 흰색(열성) → 보라색으로 나타남</text>
+</svg>
+</div>
+
+<div class="card" id="c6"><div class="ci">
+<h2>자식한테 전달할 때 — 하나씩만! 🎲</h2>
+<p>자식을 만들 때 부모는 자기 두 버전 중 <span class="hl">하나씩만</span> 전달해. 무작위로!</p>
+<div class="box w">
+<p>Bb 부모가 전달할 수 있는 건:<br>
+→ B (보라색 버전) 또는<br>
+→ b (흰색 버전)<br><br>
+어느 쪽이 전달될지는<br>
+그때그때 달라 — 랜덤이야!</p>
+</div>
+<p>이게 바로 멘델이 발견한 <span class="hl">"하나씩 무작위로 전달"</span>의 실제 메커니즘이었어.</p>
+</div></div>
+
+<div class="card" id="c7"><div class="ci">
+<h2>모건 이야기도 연결돼 🪰</h2>
+<p>ep3에서 아들은 X염색체가 1개뿐이라서 구슬이 하나뿐이라고 했지?</p>
+<div class="box b">
+<p>이제 정확히 이해돼.<br><br>
+딸: 1번~23번 염색체 모두 쌍으로<br>
+→ 유전자가 전부 두 버전씩<br><br>
+아들: 22번까지는 쌍으로,<br>
+23번(성염색체)만 X + Y<br>
+→ X에 있는 유전자는 버전이 하나뿐!<br>
+→ 그래서 흰눈 파리가 아들에게만 나왔어</p>
+</div>
+</div></div>
+
+<div class="card" id="c8">
+<div class="ci">
+<h2>감수분열 — 생식세포가 만들어지는 방법 🥚</h2>
+<p>부모가 자식한테 염색체를 전달할 때 — 46개를 통째로 줄 순 없잖아. 그러면 자식이 92개가 되잖아!</p>
+</div>
+<svg viewBox="0 0 480 130">
+<rect x="30" y="20" width="80" height="90" rx="10" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1"/>
+<text x="70" y="45" text-anchor="middle" font-size="10" font-weight="600" fill="#3C3489">부모 세포</text>
+<text x="70" y="62" text-anchor="middle" font-size="9" fill="#534AB7">46개 염색체</text>
+<text x="70" y="78" text-anchor="middle" font-size="9" fill="#534AB7">(23쌍)</text>
+
+<text x="155" y="68" text-anchor="middle" font-size="18" fill="#aaa">→</text>
+
+<rect x="195" y="20" width="70" height="40" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+<text x="230" y="38" text-anchor="middle" font-size="9" font-weight="600" fill="#085041">생식세포</text>
+<text x="230" y="52" text-anchor="middle" font-size="9" fill="#0F6E56">23개만!</text>
+
+<rect x="195" y="68" width="70" height="40" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1"/>
+<text x="230" y="86" text-anchor="middle" font-size="9" font-weight="600" fill="#085041">생식세포</text>
+<text x="230" y="100" text-anchor="middle" font-size="9" fill="#0F6E56">23개만!</text>
+
+<text x="310" y="68" text-anchor="middle" font-size="18" fill="#aaa">+</text>
+
+<rect x="330" y="44" width="70" height="40" rx="8" fill="#FDEDEC" stroke="#D85A30" stroke-width="1"/>
+<text x="365" y="62" text-anchor="middle" font-size="9" font-weight="600" fill="#C0392B">상대방</text>
+<text x="365" y="76" text-anchor="middle" font-size="9" fill="#C0392B">생식세포 23개</text>
+
+<text x="430" y="68" text-anchor="middle" font-size="18" fill="#aaa">→</text>
+<text x="455" y="55" text-anchor="middle" font-size="9" fill="#1a1a2e" font-weight="600">46개</text>
+<text x="455" y="70" text-anchor="middle" font-size="9" fill="#1a1a2e">복원!</text>
+</svg>
+<div class="ci" style="padding-top:4px">
+<p>쌍 중에서 <span class="hl">하나씩만 골라서</span> 생식세포를 만들어. 그래서 정자와 난자는 각각 23개씩. 합치면 다시 46개!</p>
+</div></div>
+
+<div class="card" id="c9"><div class="ci">
+<h2>이게 왜 중요하냐면 🌈</h2>
+<p>생식세포를 만들 때 쌍 중 어느 쪽을 고르는지가 <span class="hl">랜덤</span>이야.</p>
+<div class="box g">
+<p>23쌍에서 각각 하나씩 고르면<br>
+2²³ = 약 <strong>838만 가지</strong> 조합이 가능해!<br><br>
+여기에 교차(crossing over)까지 합치면<br>
+사실상 <strong>무한대</strong>에 가까운 조합.<br><br>
+그래서 형제자매도 다 다르고<br>
+세상에 똑같은 사람이 없는 거야!</p>
+</div>
+</div></div>
+
+<div class="card" id="c10"><div class="ci">
+<h2>정리해보면 🗺️</h2>
+<div class="box w">
+<p>🧬 염색체 46개 = 23쌍<br>
+&nbsp;&nbsp;&nbsp;엄마 버전 23개 + 아빠 버전 23개<br><br>
+🎱 멘델 구슬 두 개<br>
+&nbsp;&nbsp;&nbsp;= 같은 위치의 두 버전 유전자<br><br>
+🤼 우성: 이기는 버전이 나타남<br>
+&nbsp;&nbsp;&nbsp;열성: 지는 버전은 숨지만 전달됨<br><br>
+🎲 생식세포: 쌍에서 하나씩만 랜덤 선택<br>
+&nbsp;&nbsp;&nbsp;→ 자식마다 다른 조합</p>
+</div>
+</div></div>
+
+<div class="card" id="c11"><div class="ci">
+<h2>아직 안 푼 수수께끼가 있어 🤔</h2>
+<p>잠깐, 한 가지 이상한 게 있어.</p>
+<div class="box a">
+<p>ep1에서 배웠잖아.<br><br>
+37조 개 세포가<br>
+<strong>전부 똑같은 설계도(DNA)</strong>를 가지고 있어.<br><br>
+근데 왜 심장 세포는 심장이 되고<br>
+뇌 세포는 뇌가 되는 걸까?<br><br>
+설계도가 같으면 다 똑같이 만들어져야<br>
+하는 거 아닐까?</p>
+</div>
+</div></div>
+
+<div class="card" id="c12"><div class="ci">
+<h2>근데 말이야... 🤔</h2>
+<p>우성이 이기고 열성이 진다고 했잖아. 근데 진짜 궁금한 게 있어.</p>
+<div class="box a">
+<p>우성이 "더 좋은" 유전자라는 뜻일까?<br>
+항상 완벽하게 하나만 이기는 걸까?<br>
+혹시 둘 다 나타나는 경우도 있을까?</p>
+</div>
+<div class="shock">
+<p class="fact">사실 우성·열성은<br>훨씬 더 복잡하고<br>흥미로운 이야기야!</p>
+</div>
+<div class="nx">
+<div class="nxl">다음 에피소드 →</div>
+<div class="nxt">우성과 열성의 진짜 의미</div>
+<div class="nxd">우성이 "더 좋다"는 뜻이 아니라는 것, 그리고 예상 밖의 진짜 사례들</div>
+</div>
+</div></div>
+
+<div class="nav">
+<button class="nb" id="BP" onclick="go(-1)" disabled>← 이전</button>
+<span class="nc" id="CT">1 / 12</span>
+<button class="nb" id="BN" onclick="go(1)">다음 →</button>
+</div>
+</div>
+<script>
+var c=0,T=12,pg=document.getElementById('D');
+for(var i=0;i<T;i++){
+  var d=document.createElement('div');
+  d.className='dot'+(i===0?' on':'');
+  (function(n){d.onclick=function(){gt(n);};})(i);
+  pg.appendChild(d);
+}
+function gt(n){
+  if(n<0||n>=T)return;
+  document.getElementById('c'+(c+1)).className='card';
+  pg.children[c].className='dot';
+  c=n;
+  document.getElementById('c'+(c+1)).className='card show';
+  pg.children[c].className='dot on';
+  document.getElementById('BP').disabled=(c===0);
+  document.getElementById('BN').disabled=(c===T-1);
+  document.getElementById('CT').textContent=(c+1)+' / '+T;
+  window.scrollTo(0,0);
+}
+function go(d){gt(c+d);}
+var sx=0,sy=0,W=document.getElementById('W');
+W.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+W.addEventListener('touchend',function(e){
+  var dx=e.changedTouches[0].clientX-sx;
+  var dy=e.changedTouches[0].clientY-sy;
+  if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>40){if(dx<0)go(1);else go(-1);}
+},{passive:true});
+</script>
+</body>
+</html>
