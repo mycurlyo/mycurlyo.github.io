@@ -14,19 +14,17 @@ html,body{
   display:flex;flex-direction:column;align-items:center;
   padding:12px 0 24px;gap:10px;
 }
-
-/* 브랜드 바 — 고정 너비 */
 .bar{
-  width:360px;
+  width:92vw;max-width:420px;
   display:flex;justify-content:space-between;align-items:center;
 }
-.brand{font-size:12px;font-weight:700;color:#8878c0;letter-spacing:0.08em;}
+.brand{font-size:13px;font-weight:700;color:#8878c0;letter-spacing:0.08em;}
 .ep{font-size:11px;color:#a090c0;}
 
-/* 카드 래퍼 — 고정 크기 */
+/* 카드: 92vw 너비, 4:5 비율 */
 .wrap{
-  width:360px;
-  height:450px;
+  width:92vw;max-width:420px;
+  aspect-ratio:4/5;
   position:relative;
 }
 .card{
@@ -38,18 +36,17 @@ html,body{
 }
 .card.on{display:flex;flex-direction:column;}
 
-/* 카드 내부 공통 */
 .ci{
   width:100%;height:100%;
   display:flex;flex-direction:column;
-  padding:18px 20px;
+  padding:20px 22px;
   overflow:hidden;
 }
 
 /* 태그 */
 .tag{
-  font-size:9px;font-weight:700;letter-spacing:0.1em;
-  text-transform:uppercase;padding:3px 8px;
+  font-size:10px;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;padding:3px 9px;
   border-radius:10px;display:inline-block;
   margin-bottom:10px;width:fit-content;flex-shrink:0;
 }
@@ -58,16 +55,16 @@ html,body{
 
 /* 제목 */
 .h2{
-  font-size:17px;font-weight:900;line-height:1.3;
+  font-size:19px;font-weight:900;line-height:1.3;
   color:#2a1860;margin-bottom:10px;flex-shrink:0;
 }
 .h2 .p{color:#6040c0;}
 
 /* 본문 */
 .body{
-  font-size:12px;line-height:1.8;color:#5050a0;
+  font-size:14px;line-height:1.85;color:#5050a0;
   overflow:hidden;flex:1;
-  text-align:justify;word-break:keep-all;
+  word-break:keep-all;
 }
 .body strong{color:#2a1860;font-weight:700;}
 .body .hl{color:#6040c0;font-weight:700;}
@@ -76,58 +73,58 @@ html,body{
 /* 인용 */
 .quote{
   border-left:3px solid #6040c0;
-  padding:8px 11px;background:#6040c00a;
+  padding:8px 12px;background:#6040c00a;
   border-radius:0 8px 8px 0;
-  font-size:12px;line-height:1.75;
+  font-size:14px;line-height:1.8;
   color:#5050a0;margin:8px 0;flex-shrink:0;
-  text-align:justify;word-break:keep-all;
+  word-break:keep-all;
 }
 .quote strong{color:#2a1860;}
-.div{height:1px;background:#e8e4f4;margin:8px 0;flex-shrink:0;}
+.div{height:1px;background:#e8e4f4;margin:10px 0;flex-shrink:0;}
 
-/* 커버 전용 */
+/* 커버 */
 .kicker{
-  font-size:9px;font-weight:700;letter-spacing:0.12em;
+  font-size:10px;font-weight:700;letter-spacing:0.12em;
   text-transform:uppercase;color:#8878c0;
   flex-shrink:0;margin-bottom:10px;
 }
-.cimg{flex:0 0 44%;display:flex;align-items:center;justify-content:center;}
-.cimg img{width:100%;object-fit:contain;}
+.cimg{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;}
+.cimg img{width:100%;max-height:100%;object-fit:contain;}
 .ctitle{
-  font-size:30px;font-weight:900;line-height:1.15;
+  font-size:32px;font-weight:900;line-height:1.15;
   letter-spacing:-0.02em;color:#2a1860;
-  margin-top:10px;flex-shrink:0;
+  margin-top:12px;flex-shrink:0;
 }
 .ctitle .p{color:#6040c0;}
-.csub{font-size:11px;color:#7060a8;margin-top:6px;flex-shrink:0;}
-.cbot{margin-top:auto;display:flex;justify-content:flex-end;}
+.csub{font-size:13px;color:#7060a8;margin-top:6px;flex-shrink:0;}
+.cbot{margin-top:8px;display:flex;justify-content:flex-end;flex-shrink:0;}
 .fatg{font-size:10px;color:#c0b0e0;letter-spacing:0.08em;}
 
 /* 퀴즈 */
 .qci{
   width:100%;height:100%;
   display:flex;flex-direction:column;
-  padding:18px 20px;gap:10px;overflow:hidden;
+  padding:20px 22px;gap:10px;overflow:hidden;
 }
-.qq{font-size:15px;font-weight:700;color:#2a1860;line-height:1.6;flex-shrink:0;}
+.qq{font-size:17px;font-weight:700;color:#2a1860;line-height:1.6;flex-shrink:0;}
 .qbtns{display:flex;gap:10px;flex-shrink:0;}
 .qbtn{
-  flex:1;padding:12px;border-radius:10px;border:none;
-  font-size:22px;font-weight:900;cursor:pointer;
+  flex:1;padding:14px;border-radius:10px;border:none;
+  font-size:24px;font-weight:900;cursor:pointer;
   font-family:'Noto Sans KR',sans-serif;
 }
 .bo{background:#1D9E7518;color:#1D9E75;border:1.5px solid #1D9E7540;}
 .bx{background:#D8503018;color:#D85030;border:1.5px solid #D8503040;}
 .qres{
-  border-radius:8px;padding:8px 12px;
-  font-size:11px;font-weight:600;line-height:1.7;flex-shrink:0;
+  border-radius:8px;padding:10px 14px;
+  font-size:13px;font-weight:600;line-height:1.7;flex-shrink:0;
 }
 .rok{background:#1D9E7518;color:#1D9E75;}
 .rno{background:#D8503018;color:#D85030;}
-.nxt-wrap{display:flex;flex-direction:column;gap:6px;flex-shrink:0;}
+.nxt-wrap{display:flex;flex-direction:column;gap:7px;flex-shrink:0;}
 .nxt{
-  display:flex;align-items:center;gap:8px;
-  padding:7px 10px;border-radius:8px;
+  display:flex;align-items:center;gap:10px;
+  padding:9px 12px;border-radius:9px;
   text-decoration:none;cursor:pointer;
   border:none;width:100%;text-align:left;
   font-family:'Noto Sans KR',sans-serif;
@@ -135,21 +132,21 @@ html,body{
 .nhub{background:#6040c010;border:1px solid #6040c025;}
 .nspk{background:#1D9E7510;border:1px solid #1D9E7525;}
 .nlab{background:#D8503010;border:1px solid #D8503025;}
-.nico{font-size:13px;flex-shrink:0;}
-.nlb{font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1px;}
+.nico{font-size:14px;flex-shrink:0;}
+.nlb{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1px;}
 .nhub .nlb{color:#6040c0;}
 .nspk .nlb{color:#1D9E75;}
 .nlab .nlb{color:#D85030;}
-.ntit{font-size:10px;font-weight:700;color:#2a1860;}
+.ntit{font-size:12px;font-weight:700;color:#2a1860;}
 
 /* 네비 */
-.nav{width:360px;display:flex;justify-content:space-between;align-items:center;}
+.nav{width:92vw;max-width:420px;display:flex;justify-content:space-between;align-items:center;}
 .dots{display:flex;gap:4px;}
-.dot{width:16px;height:3px;border-radius:2px;background:#d8d4e8;cursor:pointer;transition:background 0.2s;}
+.dot{width:18px;height:3px;border-radius:2px;background:#d8d4e8;cursor:pointer;transition:background 0.2s;}
 .dot.on{background:#6040c0;}
 .nbtns{display:flex;gap:6px;}
 .nb{
-  font-size:12px;padding:6px 14px;border-radius:20px;
+  font-size:13px;padding:7px 16px;border-radius:20px;
   border:1px solid #d8d4e8;background:transparent;
   color:#a090c0;cursor:pointer;font-family:'Noto Sans KR',sans-serif;
 }
@@ -180,8 +177,14 @@ html,body{
   <div class="tag hub">이론 · Hub</div>
   <h2 class="h2">유전학은 생명현상을 연구하는 <span class="p">생명과학의 한 분야야</span></h2>
   <div class="body">
-    <p>유전학은 특히 <span class="hl">유전정보가 어떻게 작동하고</span> <span class="hl">어떻게 다음 세대로 전달되는지</span>를 다뤄.</p>
-    <p class="mt">그럼 먼저 — <strong>생명현상이란 뭘까?</strong> 살아있다는 건 어떤 건데?</p>
+    <p>유전학은 특히 <span class="hl">유전정보가 어떻게 작동하고</span> <span class="hl">어떻게 다음 세대로 전달되는지</span>를 연구해.</p>
+    <div class="quote" style="margin-top:12px;">
+      유전자 검사로 암을 예측한다<br>
+      CRISPR로 유전병을 고친다<br>
+      mRNA 백신으로 코로나를 막는다
+    </div>
+    <p class="mt">뉴스에서 듣던 이 이야기들, 사실 전부 같은 언어로 쓰여있어.</p>
+    <p class="mt">그럼 먼저 — <strong>생명현상이란 뭘까?</strong></p>
   </div>
 </div></div>
 
@@ -190,6 +193,7 @@ html,body{
   <div class="tag hub">이론 · Hub</div>
   <h2 class="h2">생명현상이란 <span class="p">뭘까?</span> 🌱</h2>
   <div class="body">
+    <p>살아있는 생명체에는 공통점이 있어.</p>
     <div class="quote">
       숨을 쉬고 🫁<br>
       밥을 먹고 🍚<br>
@@ -198,7 +202,7 @@ html,body{
       자손을 남겨 🐣
     </div>
     <p>이런 걸 <span class="hl">생명현상</span>이라고 해.</p>
-    <p class="mt">이걸 이해하는 방법이 여러 가지야. 자, <strong>케이크를 예로 들어보자.</strong> 🎂</p>
+    <p class="mt">이걸 이해하는 방법이 여러 가지야.<br>자, <strong>케이크를 예로 들어보자.</strong> 🎂</p>
   </div>
 </div></div>
 
@@ -207,73 +211,81 @@ html,body{
   <div class="tag hub">이론 · Hub</div>
   <h2 class="h2">케이크가 있다는 걸 <span class="p">아는 방법은?</span> 🎂</h2>
   <div class="body">
-    <p>눈 감아봐. 옆에 케이크가 있어. 어떻게 알 수 있을까?</p>
+    <p>눈 감아봐. 옆에 케이크가 있어.<br>어떻게 알 수 있을까?</p>
     <div class="quote">
       👀 눈으로 보거나<br>
       👃 코로 냄새 맡거나<br>
       👂 "케이크야!" 소리를 듣거나<br>
       👅 한 입 먹어보거나
     </div>
-    <p>같은 사실인데 <span class="hl">아는 방법이 여러 가지</span>잖아. 생명현상도 마찬가지야. <strong>비행기를 예로 들어볼까?</strong> ✈️</p>
+    <p>같은 사실인데 <span class="hl">아는 방법이 여러 가지</span>잖아.</p>
+    <p class="mt">생명현상도 마찬가지야.<br><strong>비행기를 예로 들어볼까?</strong> ✈️</p>
   </div>
 </div></div>
 
 <!-- c5: 비행기 -->
 <div class="card" id="c5"><div class="ci">
   <div class="tag hub">이론 · Hub</div>
-  <h2 class="h2">비행기가 어떻게 <span class="p">나는지 알고 싶다면?</span> ✈️</h2>
+  <h2 class="h2">비행기가 어떻게 나는지 <span class="p">알고 싶다면?</span> ✈️</h2>
   <div class="body">
     <div class="quote">
-      <strong>방법 1</strong> — 엔진, 날개를 뜯어서 하나씩 관찰하고 연구해.<br>
+      <strong>방법 1</strong> — 엔진, 날개를 뜯어서<br>
+      하나씩 관찰하고 연구해.<br>
       → <span class="hl">생화학</span>이 이 방식이야.<br><br>
-      <strong>방법 2</strong> — 비행기 안 설계도를 발견해서 읽어봐.<br>
+      <strong>방법 2</strong> — 비행기 안 설계도를<br>
+      발견해서 읽어봐.<br>
       → <span class="hl">유전학</span>이 이 방식이야.
     </div>
-    <p>근데 잠깐 — 이 설계도, <strong>뭔가 이상해.</strong> 👽</p>
+    <p>두 방법은 서로 경쟁이 아니라 <span class="hl">상호보완</span>이야. 같이 쓸 때 훨씬 강력해지거든.</p>
+    <p class="mt">근데 잠깐 — 이 설계도, <strong>뭔가 이상해.</strong> 👽</p>
   </div>
 </div></div>
 
 <!-- c6: 외계어 -->
 <div class="card" id="c6"><div class="ci">
   <div class="tag hub">이론 · Hub</div>
-  <h2 class="h2">근데 잠깐 — 이 설계도가 <span class="p">좀 이상해</span> 👽</h2>
+  <h2 class="h2">근데 이 설계도, <span class="p">외계어로 쓰여있어</span> 👽</h2>
   <div class="body">
     <p>생명의 설계도를 읽으려고 보니...</p>
     <div class="quote">
-      한국어? ❌&nbsp;&nbsp;영어? ❌<br>
-      한자? ❌&nbsp;&nbsp;상형문자? ❌<br><br>
-      <strong>외계어 같은 언어로 쓰여있어.</strong>
+      한국어? ❌&nbsp; 영어? ❌<br>
+      한자? ❌&nbsp; 상형문자? ❌<br><br>
+      <strong>딱 4글자로만 쓰여있어.</strong>
     </div>
-    <p>이 언어를 먼저 해독해야 설계도를 읽을 수 있어.</p>
+    <div class="quote" style="border-left:none;border:1.5px solid #6040c030;border-radius:10px;text-align:center;padding:10px 14px;">
+      <span style="font-size:22px;font-weight:900;letter-spacing:0.2em;color:#6040c0">A · T · G · C</span>
+    </div>
+    <p>영어는 26자, 한글은 24자인데<br>생명의 언어는 <span class="hl">4글자로 모든 걸 써.</span></p>
   </div>
 </div></div>
 
-<!-- c7: ATGC -->
+<!-- c7: 32억 -->
 <div class="card" id="c7"><div class="ci">
   <div class="tag hub">이론 · Hub</div>
-  <h2 class="h2">이 외계어, 알파벳은 <span class="p">딱 4글자야</span></h2>
+  <h2 class="h2">이 4글자가 <span class="p">32억 번</span> 이어져 있어</h2>
   <div class="body">
-    <div class="quote" style="border-left:none;border:1.5px solid #6040c030;border-radius:10px;text-align:center;padding:10px;">
-      <span style="font-size:20px;font-weight:900;letter-spacing:0.2em;color:#6040c0">A · T · G · C</span>
-    </div>
-    <p>이 4글자가 <strong>32억 번</strong> 이어져 있어. 책에서 쓰는 글자 크기로 쓰면</p>
+    <p>책에서 쓰는 글자 크기로 쓰면</p>
     <div class="quote">
       <strong style="color:#6040c0">서울에서 호주까지</strong> 닿는 길이.<br><br>
-      근데 그게 눈에도 안 보이는 <strong>세포 하나 안에</strong> 들어있어.
+      근데 그게 눈에도 안 보이는<br><strong>세포 하나 안에</strong> 들어있어.
     </div>
+    <p>네 몸 세포가 37조 개인데<br>그 하나하나에 <span class="hl">똑같은 설계도</span>가 다 들어있어.</p>
+    <p class="mt">이 설계도의 이름이 바로 <strong>DNA</strong>야.</p>
   </div>
 </div></div>
 
 <!-- c8: 얼마나 최근 -->
 <div class="card" id="c8"><div class="ci">
   <div class="tag hub">이론 · Hub</div>
-  <h2 class="h2">사람들이 이 언어를 이해하기 시작한 게 <span class="p">얼마나 됐을까?</span></h2>
+  <h2 class="h2">우리가 이 언어를 이해하기 시작한 게 <span class="p">얼마나 됐을까?</span></h2>
   <div class="body">
     <div class="quote">
-      이 설계도(DNA)가 뭔지 알게 된 건 <strong>겨우 70년 전.</strong><br><br>
-      32억 글자를 처음부터 끝까지 다 읽은 건 <strong>불과 20년 전이야.</strong>
+      DNA가 뭔지 알게 된 건<br>
+      <strong>겨우 70년 전.</strong><br><br>
+      32억 글자를 처음부터<br>끝까지 다 읽은 건<br>
+      <strong>불과 20년 전이야.</strong>
     </div>
-    <p>우리 할아버지가 태어났을 때 아무도 몰랐던 언어야.</p>
+    <p>우리 할아버지가 태어났을 때<br>아무도 몰랐던 언어야.</p>
     <p class="mt"><span class="hl">아직도 모르는 게 훨씬 많아.</span></p>
   </div>
 </div></div>
@@ -285,11 +297,15 @@ html,body{
   <div class="body">
     <p>알파벳부터 단어, 문법, 대화까지.</p>
     <div class="quote">
-      유전자가 어떻게 켜지고 꺼지는지<br>
       세포가 어떻게 서로 대화하는지<br>
+      유전자가 어떻게 켜지고 꺼지는지<br>
       생명이 어떻게 설계도를 읽는지—
     </div>
-    <p>이 언어를 알면 유전자 검사, CRISPR, mRNA 백신이 <span class="hl">더 이상 외계어가 아니야.</span></p>
+    <p>이 언어를 알면</p>
+    <div class="quote" style="margin-top:6px;">
+      유전자 검사 · CRISPR · mRNA 백신<br>
+      <strong>더 이상 외계어가 아니야.</strong>
+    </div>
   </div>
 </div></div>
 
@@ -298,7 +314,7 @@ html,body{
 <div class="qci" id="qci"></div>
 </div>
 
-</div><!-- wrap -->
+</div>
 
 <div class="nav">
   <div class="dots" id="dots"></div>
@@ -309,48 +325,26 @@ html,body{
 </div>
 
 <script>
-var cur=0, T=10;
-var qDone=false, qOK=null;
-var cards, dotsEl;
+var cur=0,T=10,qDone=false,qOK=null,cards,dotsEl;
 
 function renderQ(){
   var ci=document.getElementById('qci');
   if(!ci)return;
   var q='생명현상을 이해하는<br>방법은 유전학 뿐이다.';
   if(!qDone){
-    ci.innerHTML=
-      '<div class="tag qz">퀴즈</div>'+
-      '<div class="qq">'+q+'</div>'+
-      '<div class="qbtns">'+
-        '<button class="qbtn bo" onclick="doQ(true)">O</button>'+
-        '<button class="qbtn bx" onclick="doQ(false)">X</button>'+
-      '</div>';
+    ci.innerHTML='<div class="tag qz">퀴즈</div><div class="qq">'+q+'</div><div class="qbtns"><button class="qbtn bo" onclick="doQ(true)">O</button><button class="qbtn bx" onclick="doQ(false)">X</button></div>';
   } else {
     var rc=qOK?'qres rok':'qres rno';
-    var rt=qOK
-      ? '✅ 맞아! 생화학 등 다양한 방법이 있어. 유전학은 그 중 하나야.'
-      : '❌ 아쉽! 정답은 X야. 생명현상을 이해하는 방법은 여러 가지야.';
-    ci.innerHTML=
-      '<div class="tag qz">퀴즈</div>'+
-      '<div class="qq">'+q+'</div>'+
-      '<div class="'+rc+'">'+rt+'</div>'+
-      '<div class="nxt-wrap">'+
-        '<a class="nxt nhub" href="cardnews_genetics_ep1.html"><span class="nico">📖</span><div><div class="nlb">다음 에피소드</div><div class="ntit">ep1 · 설계도는 어디 있어?</div></div></a>'+
-        '<a class="nxt nspk" href="#"><span class="nico">🔬</span><div><div class="nlb">심화 · Spoke</div><div class="ntit">세포란 무엇인가</div></div></a>'+
-        '<a class="nxt nlab" href="#"><span class="nico">🧪</span><div><div class="nlb">실험 · Lab</div><div class="ntit">현미경으로 세포 보기</div></div></a>'+
-      '</div>';
+    var rt=qOK?'✅ 맞아! 생화학 등 다양한 방법이 있어. 유전학은 그 중 하나야.':'❌ 아쉽! 정답은 X야. 생명현상을 이해하는 방법은 여러 가지야.';
+    ci.innerHTML='<div class="tag qz">퀴즈</div><div class="qq">'+q+'</div><div class="'+rc+'">'+rt+'</div><div class="nxt-wrap"><a class="nxt nhub" href="cardnews_genetics_ep1.html"><span class="nico">📖</span><div><div class="nlb">다음 에피소드</div><div class="ntit">ep1 · 설계도는 어디 있어?</div></div></a><a class="nxt nspk" href="#"><span class="nico">🔬</span><div><div class="nlb">심화 · Spoke</div><div class="ntit">세포란 무엇인가</div></div></a><a class="nxt nlab" href="#"><span class="nico">🧪</span><div><div class="nlb">실험 · Lab</div><div class="ntit">현미경으로 세포 보기</div></div></a></div>';
   }
 }
 
-function doQ(ans){
-  qDone=true;
-  qOK=(ans===false); // 정답은 X
-  renderQ();
-}
+function doQ(ans){qDone=true;qOK=(ans===false);renderQ();}
 window.doQ=doQ;
 
 function show(n){
-  if(cur===T-1 && n!==T-1){qDone=false;qOK=null;}
+  if(cur===T-1&&n!==T-1){qDone=false;qOK=null;}
   cards[cur].style.display='none';
   dotsEl.children[cur].className='dot';
   cur=n;
@@ -359,21 +353,18 @@ function show(n){
   dotsEl.children[cur].className='dot on';
   document.getElementById('bp').disabled=(cur===0);
   document.getElementById('bn').disabled=(cur===T-1);
-  if(cur===T-1) renderQ();
+  if(cur===T-1)renderQ();
   window.scrollTo(0,0);
 }
 function go(d){var n=cur+d;if(n>=0&&n<T)show(n);}
 
 var sx=0;
 document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
-document.addEventListener('touchend',function(e){
-  var dx=e.changedTouches[0].clientX-sx;
-  if(Math.abs(dx)>40){dx<0?go(1):go(-1);}
-},{passive:true});
+document.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){dx<0?go(1):go(-1);}},{passive:true});
 
 document.addEventListener('DOMContentLoaded',function(){
   cards=[];
-  for(var i=1;i<=T;i++) cards.push(document.getElementById('c'+i));
+  for(var i=1;i<=T;i++)cards.push(document.getElementById('c'+i));
   cards.forEach(function(c,i){c.style.display=(i===0)?'flex':'none';if(i===0)c.style.flexDirection='column';});
   dotsEl=document.getElementById('dots');
   for(var i=0;i<T;i++){
